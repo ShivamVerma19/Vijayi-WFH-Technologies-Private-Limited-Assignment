@@ -7,17 +7,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.sample.api.ApiInterface
-import com.example.sample.api.ApiUtilities
-import com.example.sample.api.MediaItem
-import com.example.sample.repository.MovieRepository
 import com.example.sample.viewModel.MovieViewModel
-import com.example.sample.viewModel.MovieViewModelFactory
 import org.koin.androidx.compose.getViewModel
 
 @Composable
@@ -70,7 +63,6 @@ fun HomeScreen(navController: NavHostController, isMovieSelected: Boolean) {
                     title = item.title,
                     description = item.overview,
                     releaseDate = item.releaseDate,
-                    posterPath = item.posterPath,
                     onClick = {
                         val safeOverview = if (item.overview.isEmpty()) "No Overview Available" else item.overview
                         navController.navigate(
@@ -90,7 +82,6 @@ fun MovieOrTvItem(
     title: String,
     description: String,
     releaseDate: String,
-    posterPath: String,
     onClick: () -> Unit
 ) {
     Card(

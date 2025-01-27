@@ -1,10 +1,9 @@
-package com.example.sample
+package com.example.sample.UserInterface
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.compose.rememberNavController
-import com.example.sample.UserInterface.NavigationGraph
 import com.example.sample.ui.theme.SampleTheme
 
 class MainActivity : ComponentActivity() {

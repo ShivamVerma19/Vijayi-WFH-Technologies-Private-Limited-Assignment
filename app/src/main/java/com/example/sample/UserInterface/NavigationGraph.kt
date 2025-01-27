@@ -16,13 +16,13 @@ fun NavigationGraph(navController: NavHostController) {
         startDestination = "home/{isMovieSelected}",
         route = "root"
     ) {
-        // HomeScreen with isMovieSelected argument
+
         composable(
             route = "home/{isMovieSelected}",
             arguments = listOf(
                 navArgument("isMovieSelected") {
                     type = NavType.BoolType
-                    defaultValue = true // Default to showing movies
+                    defaultValue = true
                 }
             )
         ) { backStackEntry ->
@@ -30,7 +30,7 @@ fun NavigationGraph(navController: NavHostController) {
             HomeScreen(navController, isMovieSelected)
         }
 
-        // DetailScreen with all arguments, including isMovieSelected
+
         composable(
             route = "details/{title}/{overview}/{releaseDate}/{posterPath}/{isMovieSelected}",
             arguments = listOf(
@@ -51,7 +51,6 @@ fun NavigationGraph(navController: NavHostController) {
                 title = title,
                 overview = overview,
                 releaseDate = releaseDate,
-                posterPath = posterPath,
                 isMovieSelected = isMovieSelected,
                 navController = navController
             )

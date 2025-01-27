@@ -1,8 +1,6 @@
 package com.example.sample.UserInterface
 
 import android.net.Uri
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -10,25 +8,22 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import coil.compose.rememberImagePainter
 
 @Composable
 fun DetailsScreen(
     title: String,
     overview: String,
     releaseDate: String,
-    posterPath: String,
     isMovieSelected: Boolean,
     navController: NavHostController
 ) {
     val decodedTitle = Uri.decode(title)
     val decodedOverview = Uri.decode(overview)
     val decodedReleaseDate = Uri.decode(releaseDate)
-    val decodedPosterPath = Uri.decode(posterPath)
+
 
     Box(
         modifier = Modifier
@@ -70,7 +65,7 @@ fun DetailsScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Back Button
+
             Button(onClick = {
                 navController.navigate("home/$isMovieSelected") {
                     popUpTo("home/$isMovieSelected") { inclusive = true }
