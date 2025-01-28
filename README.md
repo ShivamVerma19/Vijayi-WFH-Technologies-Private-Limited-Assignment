@@ -53,3 +53,24 @@ Clone this repository.
 Add your TMDb API key in the BASE_URL within the provideRetrofit() function.
 
 Build and run the app on your device or emulator.
+
+
+# **Output**
+
+## **HomeScreen**
+
+For Movies
+
+![WhatsApp Image 2025-01-28 at 17 20 49](https://github.com/user-attachments/assets/c844d088-0970-4c0d-b047-fcab58d818a4)
+
+For Tv Shows:
+
+![WhatsApp Image 2025-01-28 at 17 20 49 (1)](https://github.com/user-attachments/assets/2711b3e8-5c8d-40e9-9547-e9ab680f3d42)
+
+
+
+## **DetailsScreen**
+
+![WhatsApp Image 2025-01-28 at 17 20 49 (2)](https://github.com/user-attachments/assets/22264a87-10cf-4f85-ac82-6e7968ed3841)
+
+
